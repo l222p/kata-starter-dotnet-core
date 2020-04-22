@@ -2,9 +2,14 @@ namespace Kata.Spec
 {
     public class Calculator
     {
-        public int Add()
+        public int Add(string input = "")
         {
-            return -1;
+            if (input == "")
+            {
+                return 0;
+            }
+            
+            return int.Parse(input);
         }
     }
 }
