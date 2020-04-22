@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 
 namespace Kata.Spec
@@ -12,7 +13,7 @@ namespace Kata.Spec
                 return 0;
             }
 
-            var result = input.Split(',').Select(int.Parse);
+            var result = input.Split(new string[]{",","\n"}, StringSplitOptions.None).Select(int.Parse);
             
             return result.Sum();
         }
